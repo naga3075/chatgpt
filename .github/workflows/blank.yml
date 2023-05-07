@@ -35,13 +35,3 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-exports.handler = async (event) => {
-    // TODO implement
-    console.log(`event=${JSON.stringify(event)}`);
-    const event_body_json = JSON.parse(event.body);
-    console.log(`challenge=${event_body_json.challenge}`);
-    const response = {
-        challenge: event_body_json.challenge
-    };
-    return response;
-};
