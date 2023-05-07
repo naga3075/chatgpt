@@ -1,0 +1,7 @@
+import json
+
+def verify(param):
+  if param.get_json().get('type') == 'url_verification':
+    body = json.dumps({'challenge': param.get_json()['challenge']})
+    headers = {'Content-Type': 'application/json'}
+    return (body, 200, headers)
